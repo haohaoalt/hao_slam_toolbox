@@ -3,5 +3,7 @@
   <node pkg="slam_toolbox" type="sync_slam_toolbox_node" name="slam_toolbox" output="screen">
     <rosparam command="load" file="$(find slam_toolbox)/config/mapper_params_offline.yaml" />
   </node>
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find slam_toolbox)/launch/offline.rviz" />
 
 </launch>
